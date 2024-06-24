@@ -105,5 +105,5 @@ dependencies {
 	implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
 	implementation("androidx.hilt:hilt-navigation-compose:1.0.0-alpha01")
 
-	implementation("com.android.support:palette-v7:28.0.0")
+	implementation("androidx.palette:palette-ktx:1.0.0")
 }
