@@ -67,7 +67,7 @@ fun PokemonListScreenView(
 					.fillMaxWidth()
 					.padding(16.dp)
 			) {
-
+				viewModel.searchPokemonList(it)
 			}
 
 			PokedexEntries(navController = navController, viewModel = viewModel)
@@ -132,6 +132,7 @@ fun PokedexEntries(
 	val endReached by remember { viewModel.endReached }
 	val isLoading by remember { viewModel.isLoading }
 	val loadError by remember { viewModel.loadError }
+	val isSearching by remember { viewModel.isSearching }
 
 	LazyVerticalGrid(
 		GridCells.Fixed(2),
@@ -147,7 +148,7 @@ fun PokedexEntries(
 	}
 
 	// Load more data if not reached the end
-	if (!endReached && !isLoading) {
+	if (!endReached && !isLoading && !isSearching) {
 		viewModel.loadPokemonPaginated()
 	}
 
