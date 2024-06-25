@@ -3,15 +3,13 @@ package com.nandaiqbalh.pokedex.ui
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.navArgument
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.nandaiqbalh.pokedex.ui.screen.pokemonlist.PokemonListScreenView
-import com.nandaiqbalh.pokedex.ui.screen.pokemonlist.PokemonListScreenViewModel
 
 @Composable
 fun Navigation(

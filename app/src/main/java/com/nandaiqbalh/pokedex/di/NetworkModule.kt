@@ -1,6 +1,7 @@
 package com.nandaiqbalh.pokedex.di
 
 import com.nandaiqbalh.pokedex.data.remote.service.PokeApi
+import com.nandaiqbalh.pokedex.util.Constant.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,7 +16,6 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule  {
 
-	private val baseUrl = "https://pokeapi.co/api/v2/"
 
 	@Singleton
 	@Provides
@@ -26,7 +26,7 @@ object NetworkModule  {
 			.addInterceptor(loggingInterceptor)
 			.build()
 		return Retrofit.Builder()
-			.baseUrl(baseUrl)
+			.baseUrl(BASE_URL)
 			.addConverterFactory(GsonConverterFactory.create())
 			.client(client)
 			.build()

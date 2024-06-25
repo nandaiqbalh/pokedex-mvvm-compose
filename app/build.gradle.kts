@@ -98,12 +98,16 @@ dependencies {
 
 	// Coil
 	implementation("io.coil-kt:coil:1.1.1")
-	implementation("com.google.accompanist:accompanist-coil:0.7.0")
+	implementation("io.coil-kt:coil-compose:2.6.0")
 
 	// Dagger - Hilt
 	implementation("com.google.dagger:hilt-android:2.48")
 	kapt("com.google.dagger:hilt-compiler:2.48")
-	kapt ("androidx.hilt:hilt-compiler:1.0.0-alpha01")
+	kapt("androidx.hilt:hilt-compiler:1.0.0")
+	implementation("androidx.hilt:hilt-work:1.0.0")
+
+	implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
+	implementation("androidx.hilt:hilt-navigation-fragment:1.0.0")
 
 	implementation("androidx.palette:palette-ktx:1.0.0")
 }
