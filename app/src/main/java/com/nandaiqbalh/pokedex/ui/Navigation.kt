@@ -9,6 +9,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.nandaiqbalh.pokedex.ui.screen.detailpokemon.DetailPokemonViewScreen
 import com.nandaiqbalh.pokedex.ui.screen.pokemonlist.PokemonListScreenView
 
 @Composable
@@ -45,6 +46,8 @@ fun Navigation(
 			val pokemonName = remember {
 				entry.arguments?.getString("pokemonName")
 			}
+
+			DetailPokemonViewScreen(dominantColor = dominantColor, pokemonName = pokemonName.toString(), navController = navController)
 
 		}
 	}
